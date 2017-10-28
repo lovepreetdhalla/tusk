@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+<script>
+//==========================================================
+// Passing array as a argument and return sum.
+//==========================================================
+var sumfinal=0;
+var sum = function(num){
+for(var i=0;i<num.length;i++){
+sumfinal=sumfinal+num[i];
+}
+return sumfinal;
+
+};
+
+var s = sum([2,4,5]);
+console.log(s);
+//===========================================================
+//Passing array as a argument and return average.
+//===========================================================
+var a=0;
+var avg = function(average){
+for(var i=0;i<average.length;i++){
+a=a+average[i];
+
+}
+console.log(a);
+};
+avg([2,4,4,2]);
+
+//=================================================================
+//Passing array as a parameter and reture the largest number.
+//=================================================================
+var temp=0;
+var largest = function(large){
+for(var i=0;i<large.length;i++){
+if(large[i]>large[i+1]){
+temp=large[i];
+}
+}
+return temp;
+}
+var l =largest([2,6,3,8,5,9,1]);
+console.log(l);
+
+//==============================================================================
+//Write a function that accepts two arguments an array of strings and a string.
+//and return true if the string is contained in the array, false otherwise.
+//==============================================================================
+var text = function(strings,string)
+{
+for(var i=0;i<strings.length;i++){
+	
+	if(strings[i]==string)
+	
+	return true;
+		
+}
+return false;
+}
+console.log(text(["preet","gagan","gurpreet"],"preet")) ;
+console.log(text(["lovepreet","gagan"],"preet")) ;
+
+
+//==============================================================================
+/*Write a function that is similar to the previous one,but returns true only 
+if the array contains the given string at lease twice.*/
+//==============================================================================
+var c = 0;
+var count = function(a1,b1){
+
+for(var i=0;i<a1.length;i++){
+	if(a1[i]==b1){
+	c++;
+	}
+}
+if(c>=2){
+return true;
+}
+return false;
+}
+var s=count(["a","b","c","d","a"],"a");
+console.log(s);
+
+//===============================================================================
+/* Write a function caled arrayContainsThree that behaves similary, but for the three 
+instead of two.Now, we'll generalize the previous problem.
+Write a function that accepts three arguments and returns true if the array contains the 
+element n times,where n is the third element.*/
+//===============================================================================
+var count=0;
+var arrayContainsThree = function(t1,t2,t3){
+for(i=0;i<t1.length;i++){
+if(t1[i]==t2){
+count++;
+}
+}
+if(count>=t3){
+return true;
+}
+return false;
+}
+console.log(arrayContainsThree(["a","b","c","a","a","r","a"],"a",3));
+console.log(arrayContainsThree(["a","b","c","a","a","r","a"],"r",8));
+</script>
+</body>
+</html>
